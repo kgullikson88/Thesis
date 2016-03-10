@@ -192,13 +192,14 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 
 \begin{table}
   \centering
+    \caption{Physical properties of the HD 189733 and HD 209458 planetary systems. The effective temperatures, masses, and radii are from \cite{Torres2008}, and r (the ratio of the flux in an average spectral line to the flux in the continuum for the planet) are from the model spectra used in this work (See Figure \ref{fig:modelcomp} and the discussion before Equation \ref{eqn:snrcrit}).}
   \begin{tabular}{|c|ccccc|}
     \hline
     Star & $T_\mathrm{ eff, star}$ (K) & $T_\mathrm{ eff, planet}$ (K) & M$_\mathrm{ p}$ (M$_\mathrm{ Jup}$) & R$_\mathrm{ p}$ (R$_\mathrm{ Jup}$)  & $r$ \\ \hline
     HD 189733 & 5040 & 1200 & 1.14 & 1.138 & 0.77 \\
     HD 209458 & 6065 & 1450 & 0.69 & 1.359 & 0.90 \\ \hline
   \end{tabular}
-  \caption{Physical properties of the HD 189733 and HD 209458 planetary systems. The effective temperatures, masses, and radii are from \cite{Torres2008}, and r (the ratio of the flux in an average spectral line to the flux in the continuum for the planet) are from the model spectra used in this work (See Figure \ref{fig:modelcomp} and the discussion before Equation \ref{eqn:snrcrit}).}
+
   \label{tab:planet}
 \end{table}
 
@@ -207,6 +208,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 
 \begin{table}
   \centering
+  \caption{Summary of minimum S/N ratios needed to detect planets for our test cases. Efficient heat redistribution refers to observations where the dayside and nightside temperatures are the same, while inefficient heat redistribution is when the nightside temperature is half that of the dayside temperature. The model dependence is estimated by using different planet models to cross-correlate against the same observation (see section \ref{sec:results}). We do not attempt to simulate observations with S/N $>1500$ because such a high value would be very difficult to achieve in the near-infrared.}
   \begin{tabular}{|c|ccc|}
     \hline
     Star & Planet Model for CCF & Heat Redistribution & Critical S/N Ratio \\ \hline
@@ -219,7 +221,6 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
     HD 209458 & HD 189733b & efficient & 1200 \\
     HD 209458 & HD 189733b & inefficient & $>$1500 \\ \hline
   \end{tabular}
-  \caption{Summary of minimum S/N ratios needed to detect planets for our test cases. Efficient heat redistribution refers to observations where the dayside and nightside temperatures are the same, while inefficient heat redistribution is when the nightside temperature is half that of the dayside temperature. The model dependence is estimated by using different planet models to cross-correlate against the same observation (see section \ref{sec:results}). We do not attempt to simulate observations with S/N $>1500$ because such a high value would be very difficult to achieve in the near-infrared.}
   \label{tab:snrcrit}
 \end{table}
 
