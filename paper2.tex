@@ -30,11 +30,11 @@ they are all transiting planets. Recently, the emission spectrum from Tau Boo b 
 
 There are several challenges to detecting the planet's near-infrared spectrum, especially in high resolution. The very low flux ratio between the planet and the star ($F_p/F_s \sim 10^{-4}$ in the K-band) requires a very sensitive instrument and a high signal-to-noise ratio (S/N), which is very challenging on current near-infrared spectrographs. Second, the near-infrared spectrum is highly contaminated by absorption from the Earth's atmosphere (telluric absorption). In order to detect a planetary spectrum, the telluric lines must be removed very well. Finally, the stellar spectrum must be removed to detect the planetary spectrum. This is extremely challenging for non-transiting planets, for which the planet is never blocked by the star. 
 
-In this paper, we investigate a technique to detect the spectrum from an approximately Jupiter mass object on a very close orbit (a Hot Jupiter) using the near-infrared spectrograph IGRINS. We briefly describe the IGRINS instrument and the simulated observations in Section \ref{sec:method}. In Section \ref{sec:results}, we test the sensitivity of our detection method to the S/N of the observations, the efficiency of heat redistribution from dayside to nightside in the planet's atmosphere, and the model atmosphere dependence of the method. We summarize our results and compare our sensitivity to the recent detections of Hot Jupiters in Section \ref{sec:summary}.
+In this paper, we investigate a technique to detect the spectrum from an approximately Jupiter mass object on a very close orbit (a Hot Jupiter) using the near-infrared spectrograph IGRINS. We briefly describe the IGRINS instrument and the simulated observations in Section \ref{paper2_sec:method}. In Section \ref{paper2_sec:results}, we test the sensitivity of our detection method to the S/N of the observations, the efficiency of heat redistribution from dayside to nightside in the planet's atmosphere, and the model atmosphere dependence of the method. We summarize our results and compare our sensitivity to the recent detections of Hot Jupiters in Section \ref{paper2_sec:summary}.
 
 
 \section{Instrument and Methodology}
-\label{sec:method}
+\label{paper2_sec:method}
 The IGRINS instrument is explained in detail in \cite{IGRINS}. IGRINS
 is an immersion grating echelle spectrograph, and will
 be capable of observing the entire H (1.4-1.8 $\mu m$) and K (2.0-2.4 $\mu m$) spectral windows at once,
@@ -52,10 +52,10 @@ the planet signal in the residuals. Each of these steps is detailed
 below.
 
 \subsection{Synthetic Observation Generation}
-\label{sec:obsgen}
+\label{paper2_sec:obsgen}
 An observed spectrum of a star and planet system can be divided into
 three parts: the star, the planet, and the Earth's atmosphere
-(telluric contamination). We use two test cases for this work: HD 189733 and HD 209458. The basic parameters of the systems are given in Table \ref{tab:planet}. We choose these planets as test cases becase they are very well-studied, with detections of the atmosphere both in transmission and emission. As a result of this, they are one of the very few planets with constrained atmospheric temperature-pressure profiles and chemical abundances. These planets are also useful as test cases since HD 209458b is thought to have a thermal inversion layer in its atmosphere \citep{Knutson2008}, while HD 189733b does not \citep{Char2008}.
+(telluric contamination). We use two test cases for this work: HD 189733 and HD 209458. The basic parameters of the systems are given in Table \ref{paper2_tab:planet}. We choose these planets as test cases becase they are very well-studied, with detections of the atmosphere both in transmission and emission. As a result of this, they are one of the very few planets with constrained atmospheric temperature-pressure profiles and chemical abundances. These planets are also useful as test cases since HD 209458b is thought to have a thermal inversion layer in its atmosphere \citep{Knutson2008}, while HD 189733b does not \citep{Char2008}.
 
  We simulate the stellar and planetary spectra using a code based
 on the Phoenix-ACES stellar atmosphere code \citep[described in][]{Barman2011}, modified to self-consistently treat a planet with intense incoming stellar radiation by using the stellar radiation field as a boundary condition on $F_{\nu}$.  \citep{Barman2001}. For this work, we used one dimensional spherical geometry, with no clouds and solar abundance ratios \citep{Asplund2005}. The temperature-pressure profiles are described in \cite{Barman2008} and \cite{Barman2002} for HD 189733b and HD 209458b (respectively). The chemical abundances are solved at each layer by assuming complete chemical equilibrium.
@@ -90,7 +90,7 @@ After adding the star and planet spectra as above, we multiply the sum by a mode
 
 
 \subsection{Telluric and Stellar Line Removal}
-\label{sec:tellcorr}
+\label{paper2_sec:tellcorr}
 We now begin attempting to recover the planet spectrum from the synthetic observations. To remove the
 telluric contamination, we use a method similar to that described by
 \cite{Rodler2012}. With this method, a ``telluric standard'' star, which is usually an A- or B-star, is observed immediately after the science target at a similar airmass. The telluric contamination is modeled independently for both stars, and then the residuals of the science star fit are divided by the residuals of the standard star fit. Using a telluric model accounts for changes in airmass, water vapor column density, and the instrumental profile between the science and standard stars, but can leave systematic errors if certain lines have incorrect oscillator strengths. Dividing the residuals after the telluric model fit removes most of these systematic errors. We simulate observations of the science target
@@ -106,7 +106,7 @@ observation. This process left large telluric residuals on the order of $5-10\%$
 quite similar in both the science star and the standard star
 observations. Thus, division of the science star residuals by the
 standard star residuals adequately (but not completely) removes the telluric
-contamination. Telluric residuals in the water bands at the edges of the H and K spectral windows were on the order of $1-2\%$ of the continuum. Figure \ref{fig:tellcorr} illustrates the telluric
+contamination. Telluric residuals in the water bands at the edges of the H and K spectral windows were on the order of $1-2\%$ of the continuum. Figure \ref{paper2_fig:tellcorr} illustrates the telluric
 removal process for a region with particularly severe telluric
 contamination. 
 
@@ -128,7 +128,7 @@ We note that our method of correcting for the telluric and stellar lines is quit
 
 
 \subsection{Recovery of Planet Radial Velocity}
-\label{sec:rv_recovery}
+\label{paper2_sec:rv_recovery}
 After removing the telluric and stellar lines, each observation has
 been reduced to a very noisy planet spectrum. Unfortunately, the low
 planet to star flux ratio of $F_p/F_s \sim 10^{-4}$ means the
@@ -142,22 +142,22 @@ Except for observations with extremely high S/N ratios, the cross-correlation fu
 
 \begin{equation}
 v_p (\phi) = v_s(\phi) \frac{M_s}{M_p}
-\label{eqn:planetmass}
+\label{paper2_eqn:planetmass}
 \end{equation}
 
-To find the true mass of the planet, we test several guess values for the ratio of stellar mass to planet mass ($M_s/M_p$). For each value, we co-add all of the CCFs after correcting for the planet radial velocity and barycentric motion. When the mass-ratio guess is correct, chance alignments with residual noise will tend to cancel out while the CCF peaks coming from the true alignment of the planet model with the planetary spectrum add together. Thus, the total CCF shows a strong peak at 0 km s$^{-1}$, indicating the detection of the planetary spectrum. Figure \ref{fig:allcorr} demonstrates the advantage of adding the cross-correlation functions from all observed orbital phases; even though the planet is only weakly detected in a few of the individual observations, the total CCF has a very strong ($\sim 6 \sigma$) peak. We determine the correct mass-ratio by comparing the height of the CCF at 0 km s$^{-1}$ for all of the mass-ratio guesses; the correct mass-ratio will have the highest CCF peak.
+To find the true mass of the planet, we test several guess values for the ratio of stellar mass to planet mass ($M_s/M_p$). For each value, we co-add all of the CCFs after correcting for the planet radial velocity and barycentric motion. When the mass-ratio guess is correct, chance alignments with residual noise will tend to cancel out while the CCF peaks coming from the true alignment of the planet model with the planetary spectrum add together. Thus, the total CCF shows a strong peak at 0 km s$^{-1}$, indicating the detection of the planetary spectrum. Figure \ref{paper2_fig:allcorr} demonstrates the advantage of adding the cross-correlation functions from all observed orbital phases; even though the planet is only weakly detected in a few of the individual observations, the total CCF has a very strong ($\sim 6 \sigma$) peak. We determine the correct mass-ratio by comparing the height of the CCF at 0 km s$^{-1}$ for all of the mass-ratio guesses; the correct mass-ratio will have the highest CCF peak.
 
 
 \section{Results}
-\label{sec:results}
-We simulated a series of IGRINS observations of non-transiting Hot Jupiter systems by using model spectra for the well studied systems HD189733 and HD209458. For both systems, we calculate the minimum S/N ratio necessary to detect the planet. In this work we consider a planet detected if the total (summed) CCF has a peak at 0 km s$^{-1}$ with at least $4\sigma$ significance, and that the planet mass is recovered correctly and unambiguously. We consider the effect of heat redistribution by taking two extreme cases as described in Section \ref{sec:obsgen}, and we estimate the model dependence of our method by cross-correlating our synthetic observations against the wrong planet model spectrum. Our method of testing the model dependence is most likely pessimistic; in a real observing campaign and indeed in current searches \citep{Brogi2012, Brogi2013, Rodler2012, deKok2013} a library of planetary atmosphere grids with different temperature, pressure, and molecular abundance profiles would be tested. We consider it likely that one model in such a model library would be closer to the true planet spectrum than our two test cases are to each other (see Figure \ref{fig:modelcomp} for a visual comparison of the planet model spectra).
+\label{paper2_sec:results}
+We simulated a series of IGRINS observations of non-transiting Hot Jupiter systems by using model spectra for the well studied systems HD189733 and HD209458. For both systems, we calculate the minimum S/N ratio necessary to detect the planet. In this work we consider a planet detected if the total (summed) CCF has a peak at 0 km s$^{-1}$ with at least $4\sigma$ significance, and that the planet mass is recovered correctly and unambiguously. We consider the effect of heat redistribution by taking two extreme cases as described in Section \ref{paper2_sec:obsgen}, and we estimate the model dependence of our method by cross-correlating our synthetic observations against the wrong planet model spectrum. Our method of testing the model dependence is most likely pessimistic; in a real observing campaign and indeed in current searches \citep{Brogi2012, Brogi2013, Rodler2012, deKok2013} a library of planetary atmosphere grids with different temperature, pressure, and molecular abundance profiles would be tested. We consider it likely that one model in such a model library would be closer to the true planet spectrum than our two test cases are to each other (see Figure \ref{paper2_fig:modelcomp} for a visual comparison of the planet model spectra).
 
 
 In general, the critical S/N ratio necessary to detect any non-transiting planet with our method depends on the ratio of the signal coming from the planet to that of the star. This ratio is not simply the flux ratio, since our cross-correlation technique requires several deep spectral lines in the planetary spectrum. If the planetary atmosphere is nearly isothermal as in WASP-12b \citep{Crossfield2012}, or has a thick haze layer in the near-infrared as HD 187333b may \citep{Gibson2012}, then the spectrum will be relatively featureless and it will be very difficult to detect in high resolution.  The critical S/N ratio can be calculated from the continuum surface flux of the planet and star ($F_\mathrm{ p, cont}$ and $F_\mathrm{ s, cont}$, respectively), the ratio of the flux in an average spectral line to the flux in the continuum for the planet ($r$), the radii of the planet and the star ($R_p$ and $R_s$, respectively), and unknown constants $A$ and $S_0$:
 
 \begin{equation}
 S/N_\mathrm{ crit} = A \frac {F_\mathrm{ s, cont}}{F_\mathrm{ p, cont}(1 - r)} \left ( \frac{R_s}{R_p} \right )^2 + S_0
-\label{eqn:snrcrit}
+\label{paper2_eqn:snrcrit}
 \end{equation}
 
 To first order, the continuum fluxes can be calculated from the blackbody fluxes and the effective temperatures of the planet and star. The planet temperature can be approximated from the stellar temperature, the semimajor axis of the planet's orbit ($a$), and the bond albedo of the planet ($A_B$) by radiative equilibrium with
@@ -166,20 +166,20 @@ To first order, the continuum fluxes can be calculated from the blackbody fluxes
 T_p^4 = \frac{1-A_B}{4} \left ( \frac{R_s}{a} \right )^2 T_s^4
 \end{equation}
 
-To test the dependence on S/N, we generated a series of synthetic observations at 25 approximately evenly spaced orbital phases for average S/N ratios ranging from 100  - 1500, with both efficient and inefficient heat redistribution (see the discussion of heat redistribution in section \ref{sec:obsgen}). We did not attempt to optimize the observing schedule for the planets with inefficient heat redistribution, and so the minimum S/N ratios we find for that case may be somewhat pessimistic. We determined the minimum S/N ratio necessary to detect the planet, and report the results in Table \ref{tab:snrcrit}. In general, HD 209458b requires higher S/N to detect than HD 189733b. HD 209458 is a hotter star while the planets are roughly the same temperature, and so the flux ratio is more extreme. In addition, HD 189733b has much deeper lines throughout its spectrum, largely from a higher water abundance \citep{Madhusudhan2009}, making the detection easier. A second trend evident in Table \ref{tab:snrcrit} is that planets with inefficient heat redistribution require a larger increase in S/N ratio to detect if the wrong planet model is used, and so are more model dependent than those with efficient heat redistribution.
+To test the dependence on S/N, we generated a series of synthetic observations at 25 approximately evenly spaced orbital phases for average S/N ratios ranging from 100  - 1500, with both efficient and inefficient heat redistribution (see the discussion of heat redistribution in section \ref{paper2_sec:obsgen}). We did not attempt to optimize the observing schedule for the planets with inefficient heat redistribution, and so the minimum S/N ratios we find for that case may be somewhat pessimistic. We determined the minimum S/N ratio necessary to detect the planet, and report the results in Table \ref{paper2_tab:snrcrit}. In general, HD 209458b requires higher S/N to detect than HD 189733b. HD 209458 is a hotter star while the planets are roughly the same temperature, and so the flux ratio is more extreme. In addition, HD 189733b has much deeper lines throughout its spectrum, largely from a higher water abundance \citep{Madhusudhan2009}, making the detection easier. A second trend evident in Table \ref{paper2_tab:snrcrit} is that planets with inefficient heat redistribution require a larger increase in S/N ratio to detect if the wrong planet model is used, and so are more model dependent than those with efficient heat redistribution.
 
-We now determine $A$ and $S_0$ from Equation \ref{eqn:snrcrit} from the known flux ratios and line strengths in HD 189733b and HD 209458b, along with the minimum S/N ratio values in Table \ref{tab:snrcrit}. For efficient heat redistribution, $A=0.1$ and $S_0 = 46$. Likewise, $A=0.1$ and $S_0 = 107$ for inefficient heat redistribution. With these values, we can estimate the S/N ratio necessary to detect other Hot Jupiters. The planet radius is not known for non-transiting planets, but we approximate this from mass-radius relationships for hydrogen-dominated planets given in \cite{Swift2012}. Lacking any information on the line strength for non-transiting planets, we take a typical value to be the average of our two test cases: $r = 0.83$. We use $A=0.1$ and $S_0=75$ in Equation \ref{eqn:snrcrit} to consider some level of heat redistribution. Table \ref{tab:targetlist} estimates the flux ratio for each of the non-transiting Hot Jupiter planets in the exoplanets.org database \citep{exoplanet}, assuming $A_B = 0.2$. The minimum S/N ratios were found with Equation \ref{eqn:snrcrit}. We calculate the exposure time for each target from the net atmospheric transmission in the K band, the expected $7\%$ net throughput of IGRINS (Dan Jaffe, priv. comm.), and simple Poisson statistics since these observations will be well within the source noise limit.
+We now determine $A$ and $S_0$ from Equation \ref{paper2_eqn:snrcrit} from the known flux ratios and line strengths in HD 189733b and HD 209458b, along with the minimum S/N ratio values in Table \ref{paper2_tab:snrcrit}. For efficient heat redistribution, $A=0.1$ and $S_0 = 46$. Likewise, $A=0.1$ and $S_0 = 107$ for inefficient heat redistribution. With these values, we can estimate the S/N ratio necessary to detect other Hot Jupiters. The planet radius is not known for non-transiting planets, but we approximate this from mass-radius relationships for hydrogen-dominated planets given in \cite{Swift2012}. Lacking any information on the line strength for non-transiting planets, we take a typical value to be the average of our two test cases: $r = 0.83$. We use $A=0.1$ and $S_0=75$ in Equation \ref{paper2_eqn:snrcrit} to consider some level of heat redistribution. Table \ref{paper2_tab:targetlist} estimates the flux ratio for each of the non-transiting Hot Jupiter planets in the exoplanets.org database \citep{exoplanet}, assuming $A_B = 0.2$. The minimum S/N ratios were found with Equation \ref{paper2_eqn:snrcrit}. We calculate the exposure time for each target from the net atmospheric transmission in the K band, the expected $7\%$ net throughput of IGRINS (Dan Jaffe, priv. comm.), and simple Poisson statistics since these observations will be well within the source noise limit.
 
-To estimate the uncertainty in the planet to star mass-ratio, and therefore the uncertainty in the true planet mass, we compare the significance of the $v=0$ km s$^{-1}$ point of the total CCFs for various mass-ratio guesses. As the guess begins getting closer to correct, the correct peaks in the individual CCFs will begin to align and the significance of the total peak will increase (See Figure \ref{fig:massratio}). We can estimate the mass-ratio uncertainty from the points where the significance of the total CCF peak drops $\sim 1 \sigma$ from the most significant mass-ratio. Smaller mass-ratio systems will have faster moving planets, so the individual CCF peaks only line up for a more narrow range of mass-ratio guesses than they would for more massive planets. Therefore, the the planet mass uncertainty with this method \emph{decreases} as the mass-ratio decreases, as long as the planet remains detectable. The width of the peak in Figure \ref{fig:massratio}, which is for a detection of HD 189733b, is $\sigma_{M_p/M_s} = 1.6\e{-4}$. Combining this with the stellar mass uncertainty gives a planet mass uncertainty of $\sigma_{M_p} = 0.15 M_\mathrm{ Jup}$. The width of the corresponding peak for a detection of HD 209458b is $\sigma_{M_p/M_s} = 2\e{-5}$ giving $\sigma_{M_p} = 0.03 M_\mathrm{ Jup}$. The planet mass uncertainty could be improved by focusing on phases near quadrature, rather than evenly sampling the orbit as we do in this paper.
+To estimate the uncertainty in the planet to star mass-ratio, and therefore the uncertainty in the true planet mass, we compare the significance of the $v=0$ km s$^{-1}$ point of the total CCFs for various mass-ratio guesses. As the guess begins getting closer to correct, the correct peaks in the individual CCFs will begin to align and the significance of the total peak will increase (See Figure \ref{paper2_fig:massratio}). We can estimate the mass-ratio uncertainty from the points where the significance of the total CCF peak drops $\sim 1 \sigma$ from the most significant mass-ratio. Smaller mass-ratio systems will have faster moving planets, so the individual CCF peaks only line up for a more narrow range of mass-ratio guesses than they would for more massive planets. Therefore, the the planet mass uncertainty with this method \emph{decreases} as the mass-ratio decreases, as long as the planet remains detectable. The width of the peak in Figure \ref{paper2_fig:massratio}, which is for a detection of HD 189733b, is $\sigma_{M_p/M_s} = 1.6\e{-4}$. Combining this with the stellar mass uncertainty gives a planet mass uncertainty of $\sigma_{M_p} = 0.15 M_\mathrm{ Jup}$. The width of the corresponding peak for a detection of HD 209458b is $\sigma_{M_p/M_s} = 2\e{-5}$ giving $\sigma_{M_p} = 0.03 M_\mathrm{ Jup}$. The planet mass uncertainty could be improved by focusing on phases near quadrature, rather than evenly sampling the orbit as we do in this paper.
 
 
 
 \section{Summary and Conclusions}
-\label{sec:summary}
+\label{paper2_sec:summary}
 We have described a technique for directly detecting the near-infrared spectrum from a 
 non-transiting Hot Jupiter using high resolution, high signal-to-noise ratio spectra. We have applied this technique to simulated observations with the IGRINS near-infrared instrument, which is sensitive to the entire H and K bands and will begin operating on the 2.7m Harlan J. Smith Telescope at McDonald Observatory in late 2013. Using models of the well-studied Hot Jupiters HD189733b and HD209458b, we make synthetic observations at various phases of the planet's orbit and at several different barycentric radial velocities to simulate observations taken at different times of the (Earth's) year. We then remove the telluric absorption and parent star spectra, and search for the planet spectra by cross-correlating the residuals against models of the planet spectrum.
 
-We have shown that the true mass and inclination of a Hot Jupiter planet can be recovered, and have determined the effect of S/N ratio as well as heat redistribution, and have estimated the model dependence of our method. Table \ref{tab:snrcrit} summarizes the results for our two test case planets, and Table \ref{tab:targetlist} estimates the S/N ratios and exposure times necessary to detect several known, non-transiting Hot Jupiters.
+We have shown that the true mass and inclination of a Hot Jupiter planet can be recovered, and have determined the effect of S/N ratio as well as heat redistribution, and have estimated the model dependence of our method. Table \ref{paper2_tab:snrcrit} summarizes the results for our two test case planets, and Table \ref{paper2_tab:targetlist} estimates the S/N ratios and exposure times necessary to detect several known, non-transiting Hot Jupiters.
 
 Our simulated observations are similar to the recent detections of Tau Boo b \citep{Rodler2012, Brogi2012}, HD 189733 b \citep{deKok2013}, and 51 Peg b \citep{Brogi2013}, all of which used the CRIRES high resolution spectrograph. The IGRINS instrument covers the entire H and K bands at once, rather than the $\sim 40$ nm range observed by CRIRES. Since the cross-correlation signal roughly scales as the square root of the number of deep spectral lines, we expect IGRINS to be more sensitive to detecting planets than CRIRES despite being on a smaller telescope. As well as simulating a different instrument, we simulate a different observing strategy; whereas previous work has used several hundred observations of a star over the course of a few closely-spaced nights, we have simulated an observing strategy where the star is observed $\sim 25$ times at various points in its phase \emph{as well as various times of the year}. This strategy is more compatible with a campaign to monitor several Hot Jupiters rather than using one observing run for each planet. It also allows for the easy addition of more data when it is received.
 
@@ -192,7 +192,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 
 \begin{table}
   \centering
-    \caption{Physical properties of the HD 189733 and HD 209458 planetary systems. The effective temperatures, masses, and radii are from \cite{Torres2008}, and r (the ratio of the flux in an average spectral line to the flux in the continuum for the planet) are from the model spectra used in this work (See Figure \ref{fig:modelcomp} and the discussion before Equation \ref{eqn:snrcrit}).}
+    \caption{Physical properties of the HD 189733 and HD 209458 planetary systems. The effective temperatures, masses, and radii are from \cite{Torres2008}, and r (the ratio of the flux in an average spectral line to the flux in the continuum for the planet) are from the model spectra used in this work (See Figure \ref{paper2_fig:modelcomp} and the discussion before Equation \ref{paper2_eqn:snrcrit}).}
   \begin{tabular}{|c|ccccc|}
     \hline
     Star & $T_\mathrm{ eff, star}$ (K) & $T_\mathrm{ eff, planet}$ (K) & M$_\mathrm{ p}$ (M$_\mathrm{ Jup}$) & R$_\mathrm{ p}$ (R$_\mathrm{ Jup}$)  & $r$ \\ \hline
@@ -200,7 +200,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
     HD 209458 & 6065 & 1450 & 0.69 & 1.359 & 0.90 \\ \hline
   \end{tabular}
 
-  \label{tab:planet}
+  \label{paper2_tab:planet}
 \end{table}
 
 
@@ -208,7 +208,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 
 \begin{table}
   \centering
-  \caption{Summary of minimum S/N ratios needed to detect planets for our test cases. Efficient heat redistribution refers to observations where the dayside and nightside temperatures are the same, while inefficient heat redistribution is when the nightside temperature is half that of the dayside temperature. The model dependence is estimated by using different planet models to cross-correlate against the same observation (see section \ref{sec:results}). We do not attempt to simulate observations with S/N $>1500$ because such a high value would be very difficult to achieve in the near-infrared.}
+  \caption{Summary of minimum S/N ratios needed to detect planets for our test cases. Efficient heat redistribution refers to observations where the dayside and nightside temperatures are the same, while inefficient heat redistribution is when the nightside temperature is half that of the dayside temperature. The model dependence is estimated by using different planet models to cross-correlate against the same observation (see section \ref{paper2_sec:results}). We do not attempt to simulate observations with S/N $>1500$ because such a high value would be very difficult to achieve in the near-infrared.}
   \begin{tabular}{|c|ccc|}
     \hline
     Star & Planet Model for CCF & Heat Redistribution & Critical S/N Ratio \\ \hline
@@ -221,7 +221,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
     HD 209458 & HD 189733b & efficient & 1200 \\
     HD 209458 & HD 189733b & inefficient & $>$1500 \\ \hline
   \end{tabular}
-  \label{tab:snrcrit}
+  \label{paper2_tab:snrcrit}
 \end{table}
 
 
@@ -230,7 +230,7 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 \begin{center}
 \begin{longtable}{|ccccc|}
 
-\caption{Estimated exposure times required for correctly retrieving the true masses of Hot Jupiters. The times are for a single observation; roughly 20-25 observations of the system at different phases are necessary to detect the planet. See Section \ref{sec:results} for the calculation of the flux ratio and critical S/N.} \\
+\caption{Estimated exposure times required for correctly retrieving the true masses of Hot Jupiters. The times are for a single observation; roughly 20-25 observations of the system at different phases are necessary to detect the planet. See Section \ref{paper2_sec:results} for the calculation of the flux ratio and critical S/N.} \\
 \hline
 Star Name & $ \mathrm{K_s}$ Magnitude & K-band flux ratio & S/N required & Time Required (Minutes) \\ \hline
 \endfirsthead
@@ -265,7 +265,7 @@ HD 185269  & 5.26 & 3.05\e{-04} & 2002 & 81.0 \\
 HD 118203  & 6.54 & 4.77\e{-04} & 1309 & 112.9 \\
 HD 102956  & 5.66 & 2.06\e{-04} & 2935 & 253.0
  
-\label{tab:targetlist}
+\label{paper2_tab:targetlist}
 \end{longtable}
 \end{center}
 
@@ -284,7 +284,7 @@ HD 102956  & 5.66 & 2.06\e{-04} & 2935 & 253.0
     the standard star residuals are in the lower (dashed) line. The systematic errors we introduced appear like emission lines in both spectra. \emph{Bottom Panel}:
     Result after division of the science star residuals by the
     standard star residuals. The telluric contamination has largely been removed.}
-  \label{fig:tellcorr}
+  \label{paper2_fig:tellcorr}
 \end{figure}
 
 
@@ -292,7 +292,7 @@ HD 102956  & 5.66 & 2.06\e{-04} & 2935 & 253.0
   \centering
   \includegraphics[width=6.5in]{Figures/paper2_fig2.pdf}
   \caption{\emph{Top Panel}: Individual cross-correlation functions for simulations of HD 189733 with an average S/N = 500, and with complete heat redistribution. The velocities are shifted at each orbital phase such that the cross-correlation function should have a peak at 0 km s$^{-1}$; the planet is only detected in a few of the observations. \emph{Bottom panel}: The total cross-correlation function, after adding the cross-correlation functions for each individual observation. Here the planet is very clearly detected with $6.29 \sigma$ significance.}
-  \label{fig:allcorr}
+  \label{paper2_fig:allcorr}
 \end{figure}
 
 
@@ -306,13 +306,13 @@ HD 102956  & 5.66 & 2.06\e{-04} & 2935 & 253.0
   in its atmosphere, which generates the emission lines near 1950
   nm. HD189733 b is somewhat cooler and has more water, giving its
   spectrum stronger spectral lines.}
-  \label{fig:modelcomp}
+  \label{paper2_fig:modelcomp}
 \end{figure}
 
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=6.5in]{Figures/paper2_fig4.pdf}
-  \caption{A summary of the significance of the point at 0 km s$^{-1}$ in the total cross-correlation functions for each of the mass-ratio guesses, for a series of observations of HD 189733 with an average S/N = 500 and complete heat redistribution (the same as in Figure \ref{fig:allcorr}). The peak in this figure determines the planet to star mass-ratio, and therefore the true planet mass. The width of the peak $1 \sigma$ below its maximum determines the uncertainty in the planet mass.}
-  \label{fig:massratio}
+  \caption{A summary of the significance of the point at 0 km s$^{-1}$ in the total cross-correlation functions for each of the mass-ratio guesses, for a series of observations of HD 189733 with an average S/N = 500 and complete heat redistribution (the same as in Figure \ref{paper2_fig:allcorr}). The peak in this figure determines the planet to star mass-ratio, and therefore the true planet mass. The width of the peak $1 \sigma$ below its maximum determines the uncertainty in the planet mass.}
+  \label{paper2_fig:massratio}
 \end{figure}
