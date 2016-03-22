@@ -6,7 +6,7 @@ Several authors have used a variant of the method we described in  Chapter \ref{
 
 
 \section{Introduction}
-With about 700 confirmed extrasolar planets \citep[from
+With about 1600 confirmed extrasolar planets \citep[from
 exoplanets.org:][]{exoplanet}, the time for characterization of these
 planets is here. A first step towards characterization is a determination of
 the planet mass. Most of the exoplanets so far discovered around nearby stars were
@@ -15,7 +15,7 @@ Doppler shift of the parent star. Unfortunately, the inclination of the orbit ca
 without another complementary method. This means that planet masses from
 radial-velocity surveys are only \emph{minimum} masses. In principle, precise astrometry could provide the complementary measurement that is needed to determine the true planet mass. However, the astrometric motion is very difficult to detect with current technology. The amplitude of the motion of a sun-like star with a Jupiter-mass planet orbiting at 0.1 AU and a distance from Earth of 10 pc is roughly $20 \mu$as, an order of magnitude below the precision of the Hubble Space Telescope Fine Guidance Sensors \citep{Benedict2006} and will be very near the precision of GAIA \citep{Sozzetti2001}.
 
-The true mass and inclination of a planet could be determined if the
+We can measure the true mass and inclination of a planet only if the
 radial velocity of the planet was known as well as that of its parent
 star. There are two ways that the
 radial velocity of an orbiting planet could be measured: light
@@ -37,7 +37,7 @@ they are all transiting planets. Recently, the emission spectrum from Tau Boo b 
 
 There are several challenges to detecting the planet's near-infrared spectrum, especially in high resolution. The very low flux ratio between the planet and the star ($F_p/F_s \sim 10^{-4}$ in the K-band) requires a very sensitive instrument and a high signal-to-noise ratio (S/N), which is very challenging on current near-infrared spectrographs. Second, the near-infrared spectrum is highly contaminated by absorption from the Earth's atmosphere (telluric absorption). In order to detect a planetary spectrum, the telluric lines must be removed very well. Finally, the stellar spectrum must be removed to detect the planetary spectrum. This is extremely challenging for non-transiting planets, for which the planet is never blocked by the star. 
 
-In this paper, we investigate a technique to detect the spectrum from an approximately Jupiter mass object on a very close orbit (a Hot Jupiter) using the near-infrared spectrograph IGRINS. We briefly describe the IGRINS instrument and the simulated observations in Section \ref{paper2_sec:method}. In Section \ref{paper2_sec:results}, we test the sensitivity of our detection method to the S/N of the observations, the efficiency of heat redistribution from dayside to nightside in the planet's atmosphere, and the model atmosphere dependence of the method. We summarize our results and compare our sensitivity to the recent detections of Hot Jupiters in Section \ref{paper2_sec:summary}.
+In this chapter, we investigate a technique to detect the spectrum from an approximately Jupiter mass object on a very close orbit (a Hot Jupiter) using the near-infrared spectrograph IGRINS. We briefly describe the IGRINS instrument and the simulated observations in Section \ref{paper2_sec:method}. In Section \ref{paper2_sec:results}, we test the sensitivity of our detection method to the S/N of the observations, the efficiency of heat redistribution from dayside to nightside in the planet's atmosphere, and the model atmosphere dependence of the method. We summarize our results and compare our sensitivity to the recent detections of Hot Jupiters in Section \ref{paper2_sec:summary}.
 
 
 \section{Instrument and Methodology}
@@ -137,10 +137,10 @@ We note that our method of correcting for the telluric and stellar lines is quit
 \subsection{Recovery of Planet Radial Velocity}
 \label{paper2_sec:rv_recovery}
 After removing the telluric and stellar lines, each observation has
-been reduced to a very noisy planet spectrum. Unfortunately, the low
+been reduced to a very noisy planet spectrum. The low
 planet to star flux ratio of $F_p/F_s \sim 10^{-4}$ means the
 random noise generally has an amplitude greater than the variation in
-the planet spectrum itself (i.e. the S/N $<1$). The situation is even worse in spectral regions with severe telluric absorption, where small errors in the telluric correction complicate the stellar spectrum removal and effectively add systematic noise. Nonetheless, we can still detect the planet
+the planet spectrum itself (i.e. the S/N $<1$). The situation is even more difficult in spectral regions with severe telluric absorption, where small errors in the telluric correction complicate the stellar spectrum removal and effectively add systematic noise. Nonetheless, we can still detect the planet
 signature by cross-correlating the residuals against a planet model
 spectrum. The cross-correlation will show a peak at the velocity
 corresponding to the radial velocity of the planet. 
@@ -177,7 +177,7 @@ To test the dependence on S/N, we generated a series of synthetic observations a
 
 We now determine $A$ and $S_0$ from Equation \ref{paper2_eqn:snrcrit} from the known flux ratios and line strengths in HD 189733b and HD 209458b, along with the minimum S/N ratio values in Table \ref{paper2_tab:snrcrit}. For efficient heat redistribution, $A=0.1$ and $S_0 = 46$. Likewise, $A=0.1$ and $S_0 = 107$ for inefficient heat redistribution. With these values, we can estimate the S/N ratio necessary to detect other Hot Jupiters. The planet radius is not known for non-transiting planets, but we approximate this from mass-radius relationships for hydrogen-dominated planets given in \cite{Swift2012}. Lacking any information on the line strength for non-transiting planets, we take a typical value to be the average of our two test cases: $r = 0.83$. We use $A=0.1$ and $S_0=75$ in Equation \ref{paper2_eqn:snrcrit} to consider some level of heat redistribution. Table \ref{paper2_tab:targetlist} estimates the flux ratio for each of the non-transiting Hot Jupiter planets in the exoplanets.org database \citep{exoplanet}, assuming $A_B = 0.2$. The minimum S/N ratios were found with Equation \ref{paper2_eqn:snrcrit}. We calculate the exposure time for each target from the net atmospheric transmission in the K band, the expected $7\%$ net throughput of IGRINS (Dan Jaffe, priv. comm.), and simple Poisson statistics since these observations will be well within the source noise limit.
 
-To estimate the uncertainty in the planet to star mass-ratio, and therefore the uncertainty in the true planet mass, we compare the significance of the $v=0$ km s$^{-1}$ point of the total CCFs for various mass-ratio guesses. As the guess begins getting closer to correct, the correct peaks in the individual CCFs will begin to align and the significance of the total peak will increase (See Figure \ref{paper2_fig:massratio}). We can estimate the mass-ratio uncertainty from the points where the significance of the total CCF peak drops $\sim 1 \sigma$ from the most significant mass-ratio. Smaller mass-ratio systems will have faster moving planets, so the individual CCF peaks only line up for a more narrow range of mass-ratio guesses than they would for more massive planets. Therefore, the the planet mass uncertainty with this method \emph{decreases} as the mass-ratio decreases, as long as the planet remains detectable. The width of the peak in Figure \ref{paper2_fig:massratio}, which is for a detection of HD 189733b, is $\sigma_{M_p/M_s} = 1.6\e{-4}$. Combining this with the stellar mass uncertainty gives a planet mass uncertainty of $\sigma_{M_p} = 0.15 M_\mathrm{ Jup}$. The width of the corresponding peak for a detection of HD 209458b is $\sigma_{M_p/M_s} = 2\e{-5}$ giving $\sigma_{M_p} = 0.03 M_\mathrm{ Jup}$. The planet mass uncertainty could be improved by focusing on phases near quadrature, rather than evenly sampling the orbit as we do in this paper.
+To estimate the uncertainty in the planet to star mass-ratio, and therefore the uncertainty in the true planet mass, we compare the significance of the $v=0$ km s$^{-1}$ point of the total CCFs for various mass-ratio guesses. As the guess begins getting closer to correct, the correct peaks in the individual CCFs will begin to align and the significance of the total peak will increase (See Figure \ref{paper2_fig:massratio}). We can estimate the mass-ratio uncertainty from the points where the significance of the total CCF peak drops $\sim 1 \sigma$ from the most significant mass-ratio. Smaller mass-ratio systems will have faster moving planets, so the individual CCF peaks only line up for a more narrow range of mass-ratio guesses than they would for more massive planets. Therefore, the the planet mass uncertainty with this method \emph{decreases} as the mass-ratio decreases, as long as the planet remains detectable. The width of the peak in Figure \ref{paper2_fig:massratio}, which is for a detection of HD 189733b, is $\sigma_{M_p/M_s} = 1.6\e{-4}$. Combining this with the stellar mass uncertainty gives a planet mass uncertainty of $\sigma_{M_p} = 0.15 M_\mathrm{ Jup}$. The width of the corresponding peak for a detection of HD 209458b is $\sigma_{M_p/M_s} = 2\e{-5}$ giving $\sigma_{M_p} = 0.03 M_\mathrm{ Jup}$. The planet mass uncertainty could be improved by focusing on phases near quadrature, rather than evenly sampling the orbit as we do in this chapter.
 
 
 
