@@ -130,8 +130,36 @@ Radial velocity monitoring surveys can detect much closer companions than imagin
 % Chapter 6  (main survey)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \include{paper6}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter 7  (Conclusions)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusions}
+
+In this thesis, we developed and characterized a spectral method to find companions to stars with a variety of temperatures. The method can be summarized as a two step process: first, prepare the spectrum by attempting to remove the signal from the primary star spectrum. The second step is to cross-correlate the prepared spectra against a grid of model spectra spanning a large parameter space. The cross correlation function (CCF) attempts to match the model spectrum template against the prepared data; if it finds a match for the template in the data then the CCF will have a strong peak at the radial velocity of the companion.
+
+We present two different ways to prepare the spectrum. In Chapter \ref{chap:dsd}, we discuss the method we use for our main survey program (Chapters \ref{chap:pilot} and \ref{chap:survey}, which takes advantage of the fact that the primary star spectrum is very simple compared to the expected companion spectrum. In this case, we prepare the spectra for a companion search by simply subtracting a low-pass filtered version of the original spectrum, a process known as unsharp masking. We extensively characterize the direct spectral detection method, estimating the companion sensitivity as well as the accuracy of the companion parameters we derive. We find that our method is capable of detecting late-K to early-M spectral type companions to A0V primary stars, and can detect them \emph{independent of the orbital separation}. As the primary star increases in mass and temperature, the coolest detectable companion gets hotter; however, the lowest detectable mass ratio decreases. 
+
+We find that there is a bias in the derived parameters of the companion star by simulating binary star observations with real data. Namely, the estimated temperature tends to be larger than the true temperature. The bias is usually largest at the coolest temperatures where the model spectra are least accurate due to the difficulty of modeling complex molecular absorption features. We calibrate the bias for four different spectrographs using a linear fit, which we use to convert from measured to actual temperature.
+
+The second way for preparing the spectrum is by using orbital information and a large degree of orbital phase coverage to remove the signal from the primary star spectrum. We describe this method in Chapters \ref{chap:psi1dra} and \ref{chap:hotjup}. The basic idea is to take advantage of the fact that the spectral lines from the primary and secondary move in different directions. Therefore if you align several spectra from different epochs such that the primary star lines are in a constant position, the companion spectral lines will be washed out. The result is an empirical estimate of the primary star spectrum that is only minimally contaminated by the companion spectrum. We remove the primary star contamination from each individual spectrum by subtracting the empirical estimate, leaving only a spectrum of the companion star. Unlike the method we describe above and in Chapter \ref{chap:dsd}, this method requires several observations of the system that span a large fraction of the orbit; it is therefore not independent of separation. The great advantage of this method is that it can detect cool companions even when the primary star spectrum is complicated. In Chapter \ref{chap:hotjup}, we show that the method is even capable of detecting planet-mass companions, which entails a contrast ratio of $\sim 10^4$ [CHECK THIS].
+
+\section{The Separation-Variant Companion Mass-Ratio Distribution}
+
+The bulk of the work in this thesis was motivated by the following question: is the companion mass-ratio distribution for binary systems with close ($a \lesssim 100 AU$) orbits significantly different from companions on wide ($a \gtrsim 100 AU$) orbits? Since we care about a quantity that changes with separation, we want a method that detects companions in such a way that the completeness does not depend on separation. Additionally, we want a method that can detect and characterize the binary system quickly. The direct spectral detection method described in Chapter \ref{chap:dsd} is just such a method, and we apply it to a binary survey in Chapter \ref{chap:survey}.
+
+We find that the companions we detect, which are necessarily all close companions because the light from both components must fall on the spectrograph slit, show a preference for companions with $q \sim 0.3$. The mass-ratio distribution for wide companions is well-fit by a power law with slope $\sim -2.3$, indicating a very strong preference for low-mass companions. In contrast, our result is poorly fit by a power law, and is much better fit by a lognormal distribution. Our result is consistent with the inner mass-ratio distribution found by the VAST survey \citep{DeRosa2014}, an adaptive optics imaging survey. However, our distribution contains far more companions since it is specifically optimized for finding close, low-mass companions. We are therefore able to determine that not only does the mass-ratio distribution change with separation, the \emph{shape} of the distribution changes.
+
+\section{Theoretical Implications}
+
+The mass-ratio distribution derived in this work has a very different form than the power law found for companions at wide separations. This is likely a result of disk interactions as the two components are accreting. The close companions that we detect may form with similar masses to their counterparts at large separations ($a \gtrsim 1000\ AU$), but preferentially accrete matter from the dense primary star disk. The result would be a depletion of low mass ratio companions as they become intermediate to high mass ratio companions. The characteristic scale of $\sim 0.3$ that we see in Figure \ref{paper6_fig:mrd} would then be related to the disk timescale, since with enough time the preferential accretion would push all companions to $q = 1.0$. 
+
+It is also possible that some of the companions found in this work were formed from a gravitationally unstable disk \citep[e.g.][]{Kratter2006, Stamatellos2011}. Being a completely different formation mechanism than the way wide companions form, we would expect the initial mass function to differ. Additionally, such companions would undergo the same preferential accretion discussed above. This explanation may even be preferable, since it could explain why we see a separation-dependent mass-ratio distribution around intermediate-mass stars but not low-mass stars: more massive stars tend to have more massive disks \citep{Andrews2013} that are more likely to fragment \citep{Kratter2010}.
+
+Large scale simulations are likely needed to distinguish between the two scenarios and fully interpret the results of this survey. A significant amount of work has already been put towards this end in the form of radiation hydrodynamic simulations of giant molecular clouds \citep{Bate2012, Krumholz2012}. However, the present simulations do not generate enough stars more massive than the sun to quantitatively compare binary and multiple star statistics to observations. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
