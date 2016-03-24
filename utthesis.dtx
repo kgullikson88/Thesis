@@ -467,6 +467,25 @@ The University of Texas at Austin\\
 % \begin{environment}{UTabstract}
 % This was modifided to match the required abstract guidelines.
 %    \begin{macrocode}
+\DeclareDocumentEnvironment{UTdedication}{ o }{ %
+\begin{titlingpage}
+\begin{center}
+\vspace*{3.5in}
+}{%
+\end{center}
+\end{titlingpage}
+}
+\DeclareDocumentEnvironment{UTacknowledgements}{ o }{ %
+\begin{titlingpage}
+\begin{center}
+{\large \bfseries Acknowledgements}
+\end{center}
+
+\vskip 2em
+\indent
+}{%
+\end{titlingpage}
+}
 \DeclareDocumentEnvironment{UTabstract}{ O{} m  }{ %
 \begin{center}
 {\bfseries\thetitle}
@@ -591,5 +610,5 @@ Committee:
 %\iffalse
 %</class>
 %\fi
-%\CheckSum{436}
+%\CheckSum{451}
 %\Finale
