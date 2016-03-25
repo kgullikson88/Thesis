@@ -1,8 +1,10 @@
 
 
-\chapter{Future Direct Spectroscopic Detection of Hot Jupiters with IGRINS}
+\chapter{Future Direct Spectroscopic Detection of Hot Jupiters with IGRINS\footnote{
+    This chapter was previously published \citep{Gullikson2013}. The co-author, Mike Endl, was my co-supervisor at the time and provided much of the inspiration for the work as well as a great deal of technical assistance.
+}}
 \label{chap:hotjup}
-Several authors have used a variant of the method we described in  Chapter \ref{chap:psi1dra} to search for emission from ``Hot Jupiter`` planets orbiting a sun-like star. In this case the flux ratio is much more extreme, but still possible with enough high signal-to-noise ratio spectra. In this chapter, we generate simulations of the IGRINS instrument to assess whether it can detect Hot Jupiter emission. This chapter was previously published \citep{Gullikson2013}. The co-author, Mike Endl, was my co-supervisor at the time and provided much of the inspiration for the work as well as a great deal of technical assistance. While the instrument was being built at the time of publication, it is now functioning on the 2.7m telescope at McDonald Observatory and a pilot survey based on this work is in progress.
+Several authors have used a variant of the method we described in  Chapter \ref{chap:psi1dra} to search for emission from ``Hot Jupiter`` planets orbiting a sun-like star. In this case the flux ratio is much more extreme, but still possible with enough high signal-to-noise ratio spectra. In this chapter, we generate simulations of the IGRINS instrument to assess whether it can detect Hot Jupiter emission.  While the instrument was being built at the time of publication, it is now functioning on the 2.7m telescope at McDonald Observatory and a pilot survey based on this work is in progress.
 
 
 \section{Introduction}
@@ -212,7 +214,6 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
 
 
 \clearpage
-\afterpage{%
 \begin{table}
   \centering
   \caption{Summary of minimum S/N ratios needed to detect planets for our test cases. Efficient heat redistribution refers to observations where the dayside and nightside temperatures are the same, while inefficient heat redistribution is when the nightside temperature is half that of the dayside temperature. The model dependence is estimated by using different planet models to cross-correlate against the same observation (see section \ref{paper2_sec:results}). We do not attempt to simulate observations with S/N $>1500$ because such a high value would be very difficult to achieve in the near-infrared.}
@@ -230,15 +231,14 @@ This research has made use of the Exoplanet Orbit Database and the Exoplanet Dat
   \end{tabular}
   \label{paper2_tab:snrcrit}
 \end{table}
-}
 
 
 \clearpage
-\afterpage{%
+\newpage
 \begin{center}
 \begin{longtable}{|ccccc|}
 
-\caption{Estimated exposure times required for correctly retrieving the true masses of Hot Jupiters. The times are for a single observation; roughly 20-25 observations of the system at different phases are necessary to detect the planet. See Section \ref{paper2_sec:results} for the calculation of the flux ratio and critical S/N.} \\
+\caption{Estimated exposure times required for correctly retrieving the true masses of Hot Jupiters. The times are for a single observation; roughly 20-25 observations of the system at different phases are necessary to detect the planet. See Section \ref{paper2_sec:results} for the calculation of the flux ratio and critical S/N. \label{paper2_tab:targetlist}} \\
 \hline
 Star Name & $ \mathrm{K_s}$ Magnitude & K-band flux ratio & S/N required & Time Required (Minutes) \\ \hline
 \endfirsthead
@@ -273,10 +273,10 @@ HD 185269  & 5.26 & 3.05\e{-04} & 2002 & 81.0 \\
 HD 118203  & 6.54 & 4.77\e{-04} & 1309 & 112.9 \\
 HD 102956  & 5.66 & 2.06\e{-04} & 2935 & 253.0
  
-\label{paper2_tab:targetlist}
+
 \end{longtable}
 \end{center}
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                Figures                          %%%%%%
