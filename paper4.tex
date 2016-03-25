@@ -153,7 +153,7 @@ We normalize each CCF by subtracting a quadratic function that we fit well away 
 
 
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{Figures/paper4_Resid_CCFs.pdf}
   \caption{Cross-correlation functions of a 4400 K model spectrum template with the data, after subtraction of the average CCF. The dark curve in the top middle is the signal of the companion star.}
@@ -162,7 +162,7 @@ We normalize each CCF by subtracting a quadratic function that we fit well away 
 
 
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{Figures/paper4_Typical_CCF.pdf}
   \caption{An example of a typical residual cross-correlation function. The dominant peak denotes the template match of the 4400 K template with the companion to $\psi^1$ Draconis A. The velocities are in the approximate rest frame of the primary star (see text for details), and the centroid and FWHM are given as vertical dotted lines.}
@@ -203,7 +203,7 @@ We use the affine invariant sampler provided in the emcee code \citep{emcee} to 
 
 Next, we calculate a series of derived quantities to characterize the companion and report them in Table \ref{paper4_tab:orbit}. The mass ratio of the system is the ratio $K_1/K_2 = 0.47$. We estimate the primary star mass by interpolating Dartmouth isochrones \citep{Dotter2008} with the `isochrones' code \citep[described in][]{Montet2015}, and using spectroscopic parameters derived in \citet{Endl2015}. The secondary mass is $M_2 = qM_1 \sim 0.70\ M_{\odot}$; assuming the same age and metallicity as the primary, the Dartmouth isochrones give an expected temperature of ${\sim}4400 $ K. That temperature is in excellent agreement with the high--contrast--imaging data, which support a companion of ${\sim}4400$ K with large uncertainty. With both the primary and secondary star mass, we calculate the orbital inclination and semimajor axis and report them in Table \ref{paper4_tab:orbit}.
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{Figures/paper4_corner.pdf}
   \caption{Marginalized posterior probability distribution estimates for the orbital parameters we fit. There is a strong degeneracy between the period and epoch of periastron ($T_0$) because we have not yet observed a full orbit.}
@@ -212,7 +212,7 @@ Next, we calculate a series of derived quantities to characterize the companion 
 
 
 
-\begin{table}
+\begin{table}[t]
   \centering
 \caption{The primary mass is derived using the spectroscopic $T_\mathrm{eff}$, $\log{g}$, and [Fe/H] and interpolating Dartmouth isochrones. The companion temperature is likewise derived from the companion mass using Dartmouth isochrones of the same metallicity.}
   \footnotesize
@@ -254,7 +254,7 @@ $a$ (AU) & $9.1^{+0.4}_{-0.3}$ \\ \hline
 
 
 
-\begin{figure}
+\begin{figure}[t]
 
   \includegraphics[width=\columnwidth]{Figures/paper4_SB2_Orbit.pdf}
   \caption{Best-fit double-lined orbit for the $\psi^1$ Draconis AC subsystem. There are no measurements of the companion at early dates because they could not be reliably measured in the residual cross-correlation functions.}

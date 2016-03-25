@@ -83,7 +83,7 @@ For the TS23, we use a $1.2''$ slit in combination with the E2 \'echelle grating
 IGRINS only has one setting with $R = 40000$. It has complete wavelength coverage from 1475-2480 nm, except for where telluric absorption is almost $100\%$ from 1810 - 1930 nm. Each star is observed in an ABBA nodding mode, and reduced using the standard IGRINS pipeline \citep{IGRINS_plp_v2}. The standard pipeline uses atmospheric OH emission lines as well as a Th-Ar calibration frame to calibrate the wavelengths; we further refine the wavelength solution using telluric absorption lines and the TelFit code.
 
 
-\begin{figure}
+\begin{figure}[t]
         \centering
         \subfigure[TS23]{
             \label{paper5_fig:error:a}
@@ -139,7 +139,7 @@ The typical temperature uncertainty with the DSD method is $\sim 150 - 200$ K, b
 
 
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=\columnwidth]{Figures/paper5_vsini_temperature_detection_rate_median.pdf}
   \caption{Median detection rate as a function of companion temperature and rotation speed. Each cell represents the median detection rate for targets with no detection in Table \ref{paper5_tab:known}. Companions represented by dark cells are detectable. See Section \ref{subpaper5_sec:sensitivity} for details of the analysis.}
@@ -167,7 +167,7 @@ In Equation \ref{paper5_eqn:gyro}, $k_C$ and $k_I$ are constants fit to data wit
 We use Equation \ref{paper5_eqn:gyro} to estimate the expected rotation period for a companion star of given temperature and age as follows: First, we convert from temperature to convective timescale ($\tau$) by interpolating Table 1 in \citet{Barnes2010a}. Next we sample an appropriate probability density function (PDF) for the age of the binary system; if the primary star was analyzed in \citet{David2015}, we use their posterior age PDFs. Otherwise, we use a uniform PDF from the Zero Age Main Sequence (ZAMS) age of the primary star to its main sequence lifetime (typically 10-200 Myr for our sample). Following the discussion in \cite{Barnes2010b}, we uniformly sample initial rotation periods from 0.2 - 5 days for all stars. We estimate the current rotation period for each pair of age and initial rotation period samples using Equation \ref{paper5_eqn:gyro} to build up a PDF of current rotation periods. We transform the period distribution into a PDF for $v\sin{i}$ using the main sequence radius of a star of the given temperature, obtained by interpolating Table 1 of \cite{Barnes2010a}, and a uniform sampling of inclinations ($\sin{i}$). Figure \ref{paper5_fig:vsini} shows a typical $v\sin{i}$ distribution, which peaks near $\sim 5-10$ $\mathrm{km\ s}^{-1}$ and has a long tail extending to $\sim 40-50 \ \mathrm{km\ s}^{-1}$.
 
 
-\begin{figure}
+\begin{figure}[t]
     \centering
     \includegraphics[width=80mm]{Figures/paper5_vsini_PDF.pdf}
     \caption{Typical probability density function for companion rotational velocity $v\sin{i}$. The distribution peaks near $\sim 5-10$ $\mathrm{km\ s}^{-1}$ and extends to very high velocities. Note that the x-axis is log-spaced to more clearly show the tails of the distribution.}
@@ -179,7 +179,7 @@ By combining the sensitivity calculations described above with the $v\sin{i}$ sa
 Companions with $T \gtrsim 6250$ K, the canonical limit at which the convective zone is too small to transfer angular momentum to the stellar wind and spin down the star \citep{Pinsonneault2001}, may have rotational velocities comparable to that of the primary star. In that case, estimating the primary star spectrum with a gaussian filter may remove much or all of the companion spectrum. Since these are the types of stars with less extreme flux- and mass-ratios, they are easier to detect with more conventional methods. However, this shortcoming could be overcome by using model spectra for the primary star as in \citet{Kolbl2015}. In this work, we have optimized the method for finding cool companions.
 
 
-\begin{figure}
+\begin{figure}[t]
         \centering
         \includegraphics[width=80mm]{Figures/paper5_DetectionRate.pdf}
 
@@ -191,7 +191,7 @@ Companions with $T \gtrsim 6250$ K, the canonical limit at which the convective 
 
 
 
-\begin{figure*}
+\begin{figure}[t]
   \centering
   \subfigure[]{
        \label{paper5_fig:detections:a}
@@ -218,9 +218,9 @@ Companions with $T \gtrsim 6250$ K, the canonical limit at which the convective 
   
   \caption{Cross-correlation functions for detected companions}
   \label{paper5_fig:detections}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}[t]
  \centering
  
   \subfigure[]{
@@ -252,7 +252,7 @@ Companions with $T \gtrsim 6250$ K, the canonical limit at which the convective 
   
   \caption{Cross-correlation functions for detected companions}
   \label{paper5_fig:detections2}
-\end{figure*}
+\end{figure}
 
 \section{Application to Known Binary Systems}
 \label{paper5_sec:results}
@@ -286,7 +286,7 @@ We list our measurements as well as the expected temperatures described above in
 
 
 
-\begin{figure}
+\begin{figure}[t]
         \centering
         \includegraphics[width=80mm]{Figures/paper5_Known_Binaries.pdf}
         
@@ -302,7 +302,7 @@ There are many companions in Table \ref{paper5_tab:known} that we do not detect.
 Finally, HIP 88290 is hot enough and expected to be rotating slowly enough that we should be able to easily detect it. In fact, we would expect to be able to directly see the companion in the spectra (the green lines in Figure \ref{paper5_fig:expected}). The fact that we do not see the composite spectrum or see a peak in the cross-correlation function implies that the companion must be rotating with $v\sin{i} > 50 \mathrm{km\ s}^{-1}$, much more quickly than Equation \ref{paper5_eqn:gyro} predicts, that the primary is a giant and therefore much brighter than main-sequence relationships suggest, or that the companion fell outside the spectrograph slit. This star is in the \cite{David2015} sample and has an effective temperature and mass consistent with main sequence, so we can rule out the giant primary possibility. Additionally, the binary separation is $0.47''$ \citep{Tokovinin2015} and the CHIRON spectrograph has a $\sim 2.7''$ diameter fiber; light from the companion is guaranteed to fall on the slit.
 
 
-\begin{figure}
+\begin{figure}[t]
         \centering
         \includegraphics[width= 80mm]{Figures/paper5_HIP_88290_Flux.pdf}
          \caption{Observed (black) and expected (green) spectra for the known binary system HIP 88290. At the expected flux ratio, the spectral lines from the companion should be easily visible. }
