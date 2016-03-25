@@ -117,7 +117,7 @@ Nonetheless, \citet{DeRosa2014} performed an adaptive optics imaging survey of n
 
 Radial velocity monitoring surveys can detect much closer companions than imaging surveys, but are typically only complete to low-mass companions if the primary is a slow rotator. Chemically peculiar Am stars are typically slow rotators, a fact typically attributed to tidal braking from binary companions; they thus form a highly biased sample of intermediate-mass stars. Nonetheless, it is interesting to note that they have a mass-ratio distribution which peaks near $q \sim 0.5$ \citep{Vuissoz2004}, an entirely different form than the power law distribution found around chemically normal stars at wide separations.
 
-TODO: Discuss how the thesis is organized!
+The remainder of this thesis is structured as follows: we start by describing the direct spectral detection method in great detail in Chapter \ref{chap:dsd}. We then detour to discuss TelFit, a tool I created to fit and remove the contamination from Earth's atmosphere in Chapter \ref{chap:telfit}. We apply a variant of the direct spectral detection method to two side projects in Chapters \ref{chap:psi1dra} and \ref{chap:hotjup}. We then describe the pilot and main survey program in Chapters \ref{chap:pilot} and \ref{chap:survey} (respectively), and provide overall survey conclusions in Chapter \ref{chap:conclusions}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,6 +165,7 @@ TODO: Discuss how the thesis is organized!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Conclusions}
+\label{chap:conclusions}
 
 In this thesis, we developed and characterized a spectral method to find companions to stars with a variety of temperatures. The method can be summarized as a two step process: first, prepare the spectrum by attempting to remove the signal from the primary star spectrum. The second step is to cross-correlate the prepared spectra against a grid of model spectra spanning a large parameter space. The cross correlation function (CCF) attempts to match the model spectrum template against the prepared data; if it finds a match for the template in the data then the CCF will have a strong peak at the radial velocity of the companion.
 
