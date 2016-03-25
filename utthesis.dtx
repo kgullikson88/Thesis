@@ -476,16 +476,13 @@ The University of Texas at Austin\\
 \end{titlingpage}
 }
 \DeclareDocumentEnvironment{UTacknowledgements}{ o }{ %
-\begin{titlingpage}
 \begin{center}
 {\large \bfseries Acknowledgements}
 \end{center}
 
 \vskip 2em
 \indent
-}{%
-\end{titlingpage}
-}
+}{\newpage}
 \DeclareDocumentEnvironment{UTabstract}{ O{} m  }{ %
 \begin{center}
 {\bfseries\thetitle}
@@ -610,5 +607,5 @@ Committee:
 %\iffalse
 %</class>
 %\fi
-%\CheckSum{451}
+%\CheckSum{450}
 %\Finale
