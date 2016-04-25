@@ -14,7 +14,9 @@ Stellar multiplicity is an inevitable and common outcome of star formation, with
 
 The overall multiplicity rate and the distributions of mass ratio, period, and eccentricity of a binary star population place important constraints on the mode of binary star formation. While the period and eccentricity are altered by dynamical processing in the birth cluster, the present-day mass ratio of a binary system is a direct result of its formation \citep{Parker2013}. Most binary stars are thought to form via core fragmentation \citep{Boss1979, Boss1986, Bate1995}, in which a collapsing core fragments into two or more individual protostars. The number and initial masses of the fragments are set by the total core mass, as well as its rotation, turbulence, and its temperature and density structure. If the fragments are well separated ($a \gtrsim 1000$ AU), they will evolve independently of each other, accreting mass from the core material onto their own protostellar disks and then onto the protostars themselves. However close fragments ($a \sim 100$ AU) will interact with each other; the protostellar disk may be truncated, destabilized, or form into a circumbinary disk if the separation is small enough \citep{Bate1997}. In addition, an unstable disk can fragment to form low-mass companions \citep{Kratter2006, Stamatellos2011}. The mass ratios of close companions formed via either mechanism should be affected by preferential accretion. Most work has suggested that the disk material will preferentially accrete onto the lower mass companion \citep{Bate1997, BBB2002}; however, recent work has indicated that magnetic disk braking may result in preferential accretion onto the more massive component \citep{Zhao2013} instead. In either case, we would expect to find a mass-ratio distribution for companions inside a few $100$ AU that differs from that of companions on wider orbits.
 
-The mass ratio, period, and eccentricity distributions are fairly well-known for solar type stars \citep{Duquennoy1991, Raghavan2010} and cooler stars \citep{Fischer1992, Delfosse2004}. Interestingly, the mass-ratio distribution appears to be invariant to separation for these stars \citep{Meyer2013}, contrary to the theoretical expectations. All of the distributions are much less certain for more massive stars. The reason for this is two-fold: first, more massive stars tend to more rare and farther away, meaning many of the companions are angularly close to the very bright primaries and difficult to detect with imaging techniques. Second, the primary stars tend to be rapid rotators, which limits radial velocity precision to $\sim 1 \mathrm{km\ s}^{-1}$. Additionally, radial velocity monitoring can only measure a mass ratio if spectral lines from both components are visible; this typically suffers from the same flux ratio difficulty as imaging techniques. 
+The mass ratio, period, and eccentricity distributions are well-known for solar type stars \citep{Duquennoy1991, Raghavan2010} and cooler stars \citep{Fischer1992, Delfosse2004}. Interestingly, \citet{Reggiani2011}, and later \citet{Meyer2013}, found that the mass-ratio distribution of field solar-type and M-dwarf stars is invariant to separation. However, the solar-type binary semimajor axis distribution peaks near $45$ AU, and only $\sim 10\%$ of binary systems have separations $a < 100$ AU \citep{Raghavan2010}; the 30 stars used in the analysis by \citet{Reggiani2011} is unsufficient to rule out a separation-variant mass-ratio distribution if it changes outside $a \gtrsim 100$ AU. Field M-dwarf binary systems have typical separations of $\sim 5$ AU \citep{Fischer1992}, and so the 27 stars using in the analysis is again insufficient to look for differences outside of $100$ AU.
+
+All of the orbital distributions are much less certain for more massive stars. The reason for this is two-fold: first, more massive stars tend to be more distant than sunlike or low-mass stars, meaning many of the companions are angularly close to the primaries and difficult to detect with imaging techniques. Second, the primary stars tend to be rapid rotators, which limits radial velocity precision to $\sim 1 \mathrm{km\ s}^{-1}$. Additionally, radial velocity monitoring can only measure a mass ratio if spectral lines from both components are visible; this typically suffers from the same flux ratio difficulty as imaging techniques.
 
 Nonetheless, \citet{DeRosa2014} performed an adaptive optics imaging survey of nearby A-type stars, and found that the mass-ratio distribution is well-described by a power law with large slope, indicating a very strong preference for low-mass companions. They also found initial evidence that the mass-ratio distribution for companions inside $125$ AU has a much shallower power law slope than that of wide companions, and is consistent with flat. Their close companion subsample contained only 18 binary systems, and the result is complicated by the inherent difficulty of detecting close companions with low mass ratios in an imaging survey. 
 
@@ -39,7 +41,9 @@ The stellar sample for this survey is defined by the following criteria:
 \end{itemize}
 \end{itemize}
 
-The magnitude limit ensures that a sufficiently high signal-to-noise ratio can be achieved in a short period of time. It does introduce a Malmquist bias in the derived mass ratio, which we discuss and correct for in Section \ref{paper6_sec:mrd}. Likewise, the $v\sin{i}$ limit makes accounting for the primary star spectrum in the companion search trivial; since most A- or B-type stars are rapid rotators, the cutoff removes less than half of the stars from the potential sample. We exclude pre-main sequence stars because both the primary and the companion mass would depend very strongly on young and uncertain ($\lesssim 1$ Myr) evolutionary models. Finally, we exclude post-main sequence stars from our sample because the binary flux ratio would be even less favorable to companion detection in an evolved star. Most of the spectral peculiarities denote narrow lines, which are already removed from the sample by the $v\sin{i}$ cut. The sample is given in Table \ref{paper6_tab:sample}. The spectral type, coordinates, V magnitude, and parallax are all adopted from the Simbad Database \citep{Simbad}, while the stellar effective tempreature, surface gravity, masses, and ages are discussed in Section \ref{paper6_sec:sp}.
+The magnitude limit ensures that a sufficiently high signal-to-noise ratio can be achieved in a short period of time. It does introduce a Malmquist bias in the derived mass ratio, which we discuss and correct for in Section \ref{paper6_sec:mrd}. Likewise, the $v\sin{i}$ limit makes accounting for the primary star spectrum in the companion search trivial; since most A- or B-type stars are rapid rotators, the cutoff removes less than half of the stars from the potential sample. We exclude pre-main sequence stars because both the primary and the companion mass would depend very strongly on young and uncertain ($\lesssim 1$ Myr) evolutionary models. Finally, we exclude post-main sequence stars from our sample because the binary flux ratio would be even less favorable to companion detection in an evolved star. Most of the spectral peculiarities denote narrow lines, which are already removed from the sample by the $v\sin{i}$ cut. The sample is given in Table \ref{paper6_tab:sample}. The spectral type, coordinates, V magnitude, and parallax are all adopted from the Simbad Database \citep{Simbad}, while the stellar effective temperature, surface gravity, masses, and ages are discussed in Section \ref{paper6_sec:sp}.
+
+The sample, being comprised of early-type stars, is heavily biased towards young stars. The estimated ages range from about 10 Myr to 1 Gyr, with most falling in the range of a few tens or hundreds of Myrs. The sample also mostly contains nearby stars, although the magnitude limit provides a greater extent than a volume-limited survey would have. The parallactic distances in our sample range from $\sim 15 - 2000$ pc. The maximum detectable separation, which we define as the point at which the companion is no longer guaranteed to fall on the spectrograph slit (see Section \ref{paper6_subsec:specdata} for a description of the spectrographs we use), is $\sim 20 - 4000$ AU. The median parallactic distance in our sample is $95$ pc, corresponding to a projected separation of $\sim 200$ AU. Most of the companions we are able to detect are close enough to have been impacted by the circumprimary disk, with $85\%$ of the sample sensitive to companions inside $100$ AU.
 
 \subsection{Spectroscopic Data}
 \label{paper6_subsec:specdata}
@@ -91,7 +95,16 @@ In order to be sensitive to hot companions, we additionally cross-correlate the 
 
 We combine the cross-correlation functions for all orders using both a simple average and the maximum-likelihood weighting scheme \citep{Zucker2003}. A companion detection is denoted by a strong peak in the combined cross-correlation function (CCF). While the maximum-likelihood scheme produces detections with much higher significance, it also magnifies spurious peaks and so has a larger false-positive rate. For this reason, we use the simple average CCFs in all further analysis.
 
-The peak height in the CCF as a function of the stellar model acts in a similar way to the more typical $\chi^2$ map of parameter space. More concretely, as the stellar model template gets closer to the true companion spectrum, the CCF peak gets higher. We can therefore measure the companion temperature and, to a lesser degree its metallicity and $v\sin{i}$, in a single spectrum. Imperfect stellar models cause a bias between the true companion temperature and the temperature of the Phoenix model which produces the largest CCF peak. This bias is most pronounced at low temperatures, where the difficult-to-model molecular absorption becomes important. We correct for the bias by applying the calibrations developed in \citet{Gullikson2016}. These calibrations are only valid for companions with $3000 < T_\mathrm{eff} < 7000 K$; for detections at hotter temperatures we assume that the temperature which produces the maximum CCF peak is an \emph{unbiased} estimator of the true companion temperature.
+The peak height in the CCF as a function of the stellar model acts in a similar way to the more typical $\chi^2$ map of parameter space. More concretely, as the stellar model template gets closer to the true companion spectrum, the CCF peak gets higher. We can therefore measure the companion temperature and, to a lesser degree its metallicity and $v\sin{i}$, in a single spectrum. We calculate the measured temperature ($T_m$) and variance ($\sigma_T^2$) as a weighted sum near the grid point with the highest CCF peak value, weighting by the peak CCF height at each temperature ($C_i$):
+
+\begin{eqnarray}
+\label{paper6_eqn:tmeas}
+T_m &=& \sum_i C_i T_i / \sum_i C_i \\
+\sigma_T^2 &=& \frac{\sum_i C_i (T_i - T_m)^2}{ \sum_i C_i - \sum_i C_i^2 / \sum_i C_i}
+\end{eqnarray}
+Typical uncertainties are on the order of $200$ K. In the case of multiple observations for the same star, we use the variance-weighted mean of the individually measured temperatures.
+
+Imperfect stellar models cause a bias between the true companion temperature and the measured temperature ($T_m$). This bias is most pronounced at low temperatures, where the difficult-to-model molecular absorption becomes important. We correct for the bias by applying the linear calibrations developed in \citet{Gullikson2016}. These calibrations are only valid for companions with $3000 < T_\mathrm{eff} < 7000 K$; for detections at hotter temperatures we assume that the temperature which produces the maximum CCF peak is an \emph{unbiased} estimator of the true companion temperature.
 
 We list the companion detections in Table \ref{paper6_tab:companions}, and report the estimate of the companion temperature, $v\sin{i}$, and metallicity derived from the model parameters which produce the largest CCF peak. The $v\sin{i}$ and metallicity values do not have uncertainties and should only be taken as a rough estimate of the true value. The mean and standard deviation of the companion metallicities is $-0.29 \pm 0.30$; the marginal bias towards low metallicities is most likely a measurement bias and does not reflect the true companion population \citep{Gullikson2016}.  We show the detection CCFs and a plot of peak CCF height as a function of model temperature for HIP 109139 in Figure \ref{paper6_fig:ccf}. Similar figures for all companions are available in the supplementary files.
 
@@ -124,13 +137,20 @@ In order to convert from companion temperature to mass ratio, we first need an e
 About half of our sample stars have robust mass and age estimates from Str\"omgren uvby$\beta$ photometry \citep{David2015}. For those that do not, we estimate the mass and age of the system from our spectra. We first cross-correlate the data against a grid of solar metallicity Kurucz model spectra \citep{Castelli2003} spanning
 
 \begin{itemize}
-\item $7000\ K < T_\mathrm{eff} < 30000\ K$ in steps of $1000\ K$
+\item $7000\ K < T_\mathrm{eff} < 30000\ K$ in steps of $500\ K$ for $T < 10000\ K$, and in steps of $1000\ K$ for hotter templates.
 \item $3.0 < \log{g} < 4.5$ in steps of $0.5$ dex
 \item $75 < v\sin{i} < 300\ \mathrm{km s}^{-1}$ in steps of $25\ \mathrm{km s}^{-1}$
 \end{itemize}
 
 
-For the optical data, we use the blue \'echelle orders ($\lambda < 5550 \AA$). We ignore the strong hydrogren Balmer lines in the spectrum because they span several \'echelle orders and make continuum normalization very difficult, potentially biasing the result. There are sufficient metal lines in the optical spectra that the resulting CCF always has a very strong peak at the radial velocity of the primary star. The near-infrared IGRINS spectra have very few strong metal lines; we use the subset from $1.51 - 1.73 \mu m$ that is dominated by hydrogren Brackett lines for these spectra. Similar to the companion search, we estimate the temperature and surface gravity of the stars from the CCF with the largest peak. We adopt the following errors on the temperature and surface gravity:
+For the optical data, we use the blue \'echelle orders ($\lambda < 5550 \AA$). We ignore the strong hydrogren Balmer lines in the 
+spectrum because they span several \'echelle orders and make continuum normalization very difficult, potentially biasing the 
+result. There are sufficient metal lines in the optical spectra that the resulting CCF always has a very strong peak at the radial 
+velocity of the primary star. The near-infrared IGRINS spectra have very few strong metal lines; we use the subset from $1.51 - 
+1.73 \mu m$ that is dominated by hydrogren Brackett lines for these spectra. Similar to the companion search, we estimate the 
+temperature and surface gravity of the stars from the CCF with the largest peak. We adopt the following errors on the temperature 
+and surface gravity, which are based on the grid step size and are somewhat more pessimistic than typical uncertainties seen in 
+the literature for A- and B-type stars \citep[e.g.][]{Aydi2014, David2015}:
 
 \begin{align}
  \sigma_T &= \begin{cases}
@@ -149,7 +169,7 @@ Next, we use Padova stellar evolutionary tracks \citep{Bressan2012} and the isoc
 \label{paper6_fig:prim_mass}.
 \end{figure}
 
-We show the temperature, surface gravity, mass, and age estimates for most of our sample stars Table \ref{paper6_tab:sample}. We do not give parameters for the few stars that show strong discrepancies with the spectral-type estimate, most of which are early B-stars that have temperatures higher than the maximum grid temperature of $30000\ K$. 
+We show the temperature, surface gravity, mass, and age estimates for most of our sample stars in Table \ref{paper6_tab:sample}. We do not give parameters for the few stars that show strong discrepancies with the spectral-type estimate, most of which are early B-stars that have temperatures higher than the maximum grid temperature of $30000\ K$.
 
 
 
@@ -239,7 +259,7 @@ Q(q_i) = \frac{1}{N_i} \sum_j Q_j(q_i)
 In the equation above, $N_i$ is the number of sample stars that contain an estimate for $Q(q_i)$ without extrapolating. For $q_i \sim 0.2$, $N_i$ is near the total sample size. However, $N_i$ falls for both low and high q, since a $3000\ K$/$12000\ K$ companion has a mass ratio $q = 0.08/2.0$ for an A9V primary, but $q = 0.007/0.19$ for a B0V primary. Our sensitivity analysis therefore does not sample large mass ratios around the very early-type primary stars in the sample, and does not sample very low mass ratios around late-type primary stars.
 
 
-\citet{Gullikson2016} used a very similar method to search for known companions to A- and B-type stars, and found that the detection rate is high for G- and K-dwarf companions but very low for hot companions. The search grid used in this work includes much hotter temperatures, and we have several detections of hot companions (see Table \ref{paper6_tab:companions}). We test to determine if the completeness is reasonable at large mass ratios by comparing to known binary systems. We detect 15 of the 25 stars in our sample with a hot ($T > 7000\ K$) companion in either the Washington Double Star Catalog \citep{WDS} or the Ninth Catalog of Spectroscopic Binary Orbits \citep{SB9}. The completeness function for hot, roughly equal-mass companions suggest the probability of detection if $\sim 80\%$, which is still incompatible with our low detection rate. The discrepancy may be due to an underestimate of the typical rotation rates for hot stars, which we use when marginalizing out the dependence on $v\sin{i}$. Additionally, rapidly rotating companions, especially when they have a similar temperature to the primary, are more difficult to detect if they have a small radial velocity offset from the primary star. While the injection and recovery experiments do sample velocity space to account for this, they may be over-sampling companions with very large velocity offsets and producing anomalously high detection rates. We account for the discrepancy by introducing a scaling factor: we multiply the estimated detection rate for all companions with $T > 7000\ K$ by $f=0.8$. 
+\citet{Gullikson2016} used a very similar method to search for known companions to A- and B-type stars, and found that the detection rate is high for G- and K-dwarf companions but very low for hot companions. The search grid used in this work includes much hotter temperatures, and we have several detections of hot companions (see Table \ref{paper6_tab:companions}). We test to determine if the completeness is reasonable at large mass ratios by comparing to known binary systems. We detect 15 of the 25 stars in our sample with a hot ($T > 7000\ K$) companion in either the Washington Double Star Catalog \citep{WDS} or the Ninth Catalog of Spectroscopic Binary Orbits \citep{SB9}. The completeness function for hot, roughly equal-mass companions suggests the probability of detection is $\sim 80\%$, which is still incompatible with our low detection rate. The discrepancy may be due to an underestimate of the typical rotation rates for hot stars, which we use when marginalizing out the dependence on $v\sin{i}$. Additionally, rapidly rotating companions, especially when they have a similar temperature to the primary, are more difficult to detect if they have a small radial velocity offset from the primary star. While the injection and recovery experiments do sample velocity space to account for this, they may be over-sampling companions with very large velocity offsets and producing anomalously high detection rates. We account for the discrepancy by introducing a scaling factor: we multiply the estimated detection rate for all companions with $T > 7000\ K$ by $f=0.8$.
 
 
 \begin{figure}[t]
@@ -267,7 +287,7 @@ We use the methodology developed in \citet{Foreman2014} to perform bayesian infe
 \label{paper6_eqn:money}
 \end{multline}
 
-In the above equation, $\{\vec{x_k}\}$ denotes the data for star $k$, and $\vec{\theta}$ denotes the parameters for the model we are fitting. $K=341$ is the total sample size for our survey, $Q(q)$ is the completeness function shown in Figure \ref{paper6_fig:completeness}, and $P(q|\vec{\theta})$ is the likelihood function for the mass ratio given the model parameters. We fit the data to three distinct distributions: a histogram ($P_1$), a lognormal distribution ($P_2$), and a power law ($P_3$):
+In the above equation, $\{\vec{x_k}\}$ denotes the data for star $k$, and $\vec{\theta}$ denotes the parameters for the model we are fitting. $K=50$ is the number of stars used in the analysis, $Q(q)$ is the completeness function shown in Figure \ref{paper6_fig:completeness}, and $P(q|\vec{\theta})$ is the likelihood function for the mass ratio given the model parameters. We fit the data to three distinct distributions: a histogram ($P_1$), a lognormal distribution ($P_2$), and a power law ($P_3$):
 
 \begin{align}
  P_1(q|\vec{\theta}) &= \begin{cases}
@@ -327,7 +347,7 @@ We already know $P(q|\vec{\theta})$ (Equations \ref{paper6_eqn:P1} - \ref{paper6
 
 With the fitted malmquist-correction polynomial, we then substitute $P(q|\vec{\theta}, \mathrm{obs})$ everywhere $P(q|\vec{\theta})$ appears in Equation \ref{paper6_eqn:money}.
 
-We show the resulting fits in Figure \ref{paper6_fig:mrd}. The $1\sigma$ uncertainties in the bin heights from the histogram model are shown as error bars, and we overplot 300 samples of the lognormal distribution fit to show the spread allowed by the data. The best-fit power law is plotted with a red dot-dashed line. We also estimate the mass-ratio distribution expected from random pairing of the Kroupa Initial Mass Function (IMF), and show the result in yellow. We estimate the distribution by drawing 100000 primary stars from the IMF with masses between $1.5 < M/M_{\odot} < 20$. We then draw companions from the same IMF, with the restriction that the companion has a lower mass than the primary. The result plotted in yellow in Figure \ref{paper6_fig:mrd} is a gaussian kernel density estimate of the resulting mass ratios, with a bandwidth of $0.05$.
+We summarize the parameters in Table \ref{paper6_tab:parameters}, and show the resulting fits in Figure \ref{paper6_fig:mrd}. The $1\sigma$ uncertainties in the bin heights from the histogram model are shown as error bars, and we overplot 300 samples of the lognormal distribution fit to show the spread allowed by the data. The best-fit power law is plotted with a red dot-dashed line. We also estimate the mass-ratio distribution expected from random pairing of the Kroupa Initial Mass Function (IMF), and show the result in yellow. We estimate the distribution by drawing 100000 primary stars from the IMF with masses between $1.5 < M/M_{\odot} < 20$. We then draw companions from the same IMF, with the restriction that the companion has a lower mass than the primary. The result plotted in yellow in Figure \ref{paper6_fig:mrd} is a gaussian kernel density estimate of the resulting mass ratios, with a bandwidth of $0.05$.
 
 
 \begin{figure}[t]
@@ -361,7 +381,9 @@ The extreme unlikeliness of the Kroupa IMF model also indicates that our sample 
 
 \subsection{Comparison to Previous Results}
 
-Our mass-ratio distribution appears to be in tension with the results of the VAST survey \citep{DeRosa2014}, which finds a nearly flat distribution for close companions. However, their subsample of close companions only includes 18 binaries, so it is possible that the different forms are just a result of small number statistics. To assess the degree of tension, we use the Anderson-Darling  test \citep{Anderson1954} to find the probability that both their close companion subsample and our companions are drawn from the same parent distribution. We only use companions from this work with mean $\overline{q} > 0.15$ because the VAST survey subsample makes the same cut. To account for measurement uncertainties in the mass ratios, we draw from both our mass ratio samples ($q_k^{(n)}$, see Section \ref{paper6_sec:mrd}) and the VAST mass ratio values many times and compute the Anderson-Darling test statistic each time. Since \citet{DeRosa2014} do not quote uncertainties, we assume uncertainties of $\sigma_q = 0.05$ for all of their measurements. The result is $p = 0.10^{+0.07}_{-0.04}$; we cannot reject the hypothesis that both samples come from the same distribution.
+Our mass-ratio distribution appears to be in tension with the results of the VAST survey \citep{DeRosa2014}, which finds a nearly flat distribution for close companions. However, their subsample of close companions only includes 18 binaries, so it is possible that the different forms are just a result of small number statistics. To assess the degree of tension, we use the Anderson-Darling  test \citep{Anderson1954} to find the probability that both their close companion subsample and our companions are drawn from the same parent distribution. We only use companions from this work with mean $\overline{q} > 0.15$ because the VAST survey subsample makes the same cut. The VAST survey also only included stars with projected separations $a < 125$ AU in their close companion subsample. Since we cannot estimate the separation from our data, we do not make such a cut. We could make a cut using the \emph{maximum} possible separation, set by the distance and spectrograph slit width, but doing so vastly reduces the number of detections and does not affect the result.
+
+To account for measurement uncertainties in the mass ratios, we draw from both our mass ratio samples ($q_k^{(n)}$, see Section \ref{paper6_sec:mrd}) and the VAST mass ratio values many times and compute the Anderson-Darling test statistic each time. Since \citet{DeRosa2014} do not quote uncertainties, we assume uncertainties of $\sigma_q = 0.05$ for all of their measurements. The result is $p = 0.10^{+0.07}_{-0.04}$; we cannot reject the hypothesis that both samples come from the same distribution.
 
 
 \subsection{Theoretical Implications}
@@ -369,7 +391,7 @@ Our mass-ratio distribution appears to be in tension with the results of the VAS
 
 The mass-ratio distribution derived in this work has a very different form than the power law found for companions at wide separations. This is likely a result of disk interactions as the two components are accreting. The close companions that we detect may form with similar masses to their counterparts at large separations ($a \gtrsim 1000\ AU$), but preferentially accrete matter from the dense primary star disk. The result would be a depletion of low mass ratio companions as they become intermediate to high mass ratio companions. The characteristic scale of $\sim 0.3$ that we see in Figure \ref{paper6_fig:mrd} would then be related to the disk timescale, since with enough time the preferential accretion would push all companions to $q = 1.0$. 
 
-It is also possible that some of the companions found in this work were formed from a gravitationally unstable disk \citep[e.g.][]{Kratter2006, Stamatellos2011}. Being a completely different formation mechanism than the way wide companions form, we would expect the initial mass function to differ. Additionally, such companions would undergo the same preferential accretion discussed above. This explanation may even be preferable, since it could explain why we see a separation-dependent mass-ratio distribution around intermediate-mass stars but not low-mass stars: more massive stars tend to have more massive disks \citep{Andrews2013} that are more likely to fragment \citep{Kratter2010}.
+It is also possible that some of the companions found in this work were formed from a gravitationally unstable disk \citep[e.g.][]{Kratter2006, Stamatellos2011}. Being a completely different formation mechanism than the way wide companions form, we would expect the initial companion mass function to differ. Additionally, such companions would undergo the same preferential accretion discussed above. This explanation may even be preferable, since it could explain why we see a separation-dependent mass-ratio distribution around intermediate-mass stars but not low-mass stars: more massive stars tend to have more massive disks \citep{Andrews2013} that are more likely to fragment \citep{Kratter2010}.
 
 Large scale simulations are likely needed to distinguish between the two scenarios and fully interpret the results of this survey. A significant amount of work has already been put towards this end in the form of radiation hydrodynamic simulations of giant molecular clouds \citep{Bate2012, Krumholz2012}. However, the present simulations do not generate enough stars more massive than the sun to quantitatively compare binary and multiple star statistics to observations. 
 
@@ -1440,3 +1462,42 @@ Based on observations at Cerro Tololo Inter-American Observatory, National Optic
 \end{scriptsize}
 }
 
+
+\clearpage
+\afterpage{%
+\begin{normalsize}
+\begin{longtable}{|r|rlll|}
+    
+    \caption{Mass-Ratio Distribution Parameters. \label{paper6_tab:parameters}} \\ \hline
+       & & & \multicolumn{2}{c}{$1 \sigma$ credible interval} \\
+      Model & Parameter & Median Value & Lower & Upper \\ \hline
+    \endfirsthead
+
+    \caption{ - (Continued)}
+    \\ \hline
+   & & & \multicolumn{2}{c}{$1 \sigma$ credible interval} \\
+      Model & Parameter & Median Value & Lower & Upper \\ \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+
+Histogram   & $\theta_1$                    & 0.50 & 0.18 & 1.00 \\
+                   & $\theta_2$                    & 1.53 & 1.14 & 1.89 \\
+                   & $\theta_3$                    & 2.17 & 1.80 & 2.65\\
+                   & $\theta_4$                    & 1.42 & 0.98 & 1.81 \\
+                   & $\theta_5$                    & 0.74 & 0.40 & 1.12 \\
+                   & $\theta_6$                    & 0.29 & 0.10 & 0.55 \\
+                   & $\theta_7$                    & 0.16 & 0.06 & 0.33 \\ \hline
+Lognormal  & $\mu$                           & -0.99 & -1.06 & -0.92 \\
+                   & $\sigma$                      & 0.46  &  0.40  &  0.54 \\
+                   & maximum$^{\dagger}$ & 0.30  & 0.27   & 0.33 \\ \hline
+Power Law & $\gamma$                    & 0.29  & 0.15   & 0.42
+
+\end{longtable}
+\end{normalsize}
+}
